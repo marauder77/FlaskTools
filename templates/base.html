@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Time!</title>
+</head>
+
+<body>
+    {% for msg in get_flashed_messages() %}
+    <p>{{ msg }}</p>
+    {% endfor %}
+
+    <!-- since the block content was on survey_start.html, this also has to show it
+    otherwise it won't actually connect and appear on the screen. Remember, the base.html
+is just that. The BASE. You still have to connect information to it somehow for it to appear. -->
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
